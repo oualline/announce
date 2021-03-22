@@ -1,0 +1,64 @@
+m 00:00 00:00 thomas/01.Track_1.mp3
+a 08:00 10:00 thomas/picture.mp3
+a 09:00 17:00 thomas/red.mp3
+a 13:30 17:00 thomas/thanks.mp3
+
+m 00:00 00:00 thomas/02.Track_2.mp3
+a 08:00 10:00 thomas/safe.mp3
+a 09:00 17:00 thomas/loop.mp3
+a 08:00  8:50 thomas/thomas_pict.mp3
+a 09:30  9:50 thomas/thomas_pict.mp3
+a 10:30 10:50 thomas/thomas_pict.mp3
+a 11:30 11:50 thomas/thomas_pict.mp3
+a 12:30 12:50 thomas/thomas_pict.mp3
+a 13:30 13:50 thomas/thomas_pict.mp3
+a 14:30 14:50 thomas/thomas_pict.mp3
+
+m 00:00 00:00 thomas/03.Track_3.mp3
+a 08:00 10:00 thomas/picture.mp3
+a 09:00 17:00 thomas/carbarn1.mp3
+a 13:30 17:00 thomas/thanks.mp3
+
+m 00:00 00:00 thomas/04.Track_4.mp3
+a 08:00 10:00 thomas/safe.mp3
+a 09:00 17:00 thomas/middleton.mp3
+
+m 00:00 00:00 thomas/05.Track_5.mp3
+a 08:00 10:00 thomas/picture.mp3
+a 08:00 10:00 thomas/thomas_pict.mp3
+a 09:00 17:00 thomas/petting.mp3
+a 13:30 17:00 thomas/thanks.mp3
+
+m 00:00 00:00 thomas/06.Track_6.mp3
+a 08:00 10:00 thomas/safe.mp3
+a 09:00 17:00 thomas/carbarn4.mp3
+a 13:30 17:00 thomas/thanks.mp3
+
+m 00:00 00:00 thomas/07.Track_7.mp3
+a 08:00 10:00 thomas/picture.mp3
+a 08:00 10:00 thomas/thomas_pict.mp3
+
+m 00:00 00:00 thomas/08.Track_8.mp3
+a 08:00 10:00 thomas/safe.mp3
+a 13:30 17:00 thomas/thanks.mp3
+
+m 00:00 00:00 thomas/09.Track_9.mp3
+a 08:00 10:00 thomas/picture.mp3
+a 08:00 10:00 thomas/thomas_pict.mp3
+
+m 00:00 00:00 thomas/10.Track_10.mp3
+a 08:00 10:00 thomas/safe.mp3
+a 09:00 17:00 thomas/carbarn4.mp3
+
+m 00:00 00:00 thomas/11.Track_11.mp3
+a 08:00 10:00 thomas/picture.mp3
+a 13:30 17:00 thomas/thanks.mp3
+
+m 00:00 00:00 thomas/12.Track_12.mp3
+a 08:00 10:00 thomas/safe.mp3
+a 08:00 10:00 thomas/thomas_pict.mp3
+a 09:00 17:00 thomas/red.mp3
+
+m 00:00 00:00 thomas/13.Track_13.mp3
+a 08:00 10:00 thomas/picture.mp3
+a 09:00 17:00 thomas/carbarn4.mp3

@@ -1,0 +1,108 @@
+# Debugging
+# Test
+08:40 bad file name.mp3
+08:40 thomas/thomas_15.mp3
+08:45 thomas/thomas_10.mp3
+08:50 thomas/thomas_05.mp3
+08:50 thomas/percy_15.mp3
+08:55 thomas/percy_10.mp3
+08:55 thomas/hatt_05.mp3
+09:00 thomas/hatt_now.mp3
+09:00 thomas/percy_05.mp3
+
+09:40 thomas/thomas_15.mp3
+09:45 thomas/thomas_10.mp3
+09:50 thomas/thomas_05.mp3
+09:50 thomas/percy_15.mp3
+09:55 thomas/percy_10.mp3
+09:55 thomas/hatt_05.mp3
+10:00 thomas/hatt_now.mp3
+10:00 thomas/percy_05.mp3
+
+10:20 thomas/live_10.mp3
+10:25 thomas/live_05.mp3
+10:30 thomas/live.mp3
+
+10:40 thomas/thomas_15.mp3
+10:45 thomas/thomas_10.mp3
+10:50 thomas/thomas_05.mp3
+10:50 thomas/percy_15.mp3
+10:55 thomas/percy_10.mp3
+10:55 thomas/hatt_05.mp3
+11:00 thomas/hatt_now.mp3
+11:00 thomas/percy_05.mp3
+
+11:20 thomas/live_10.mp3
+11:25 thomas/live_05.mp3
+11:30 thomas/live.mp3
+
+11:40 thomas/thomas_15.mp3
+11:45 thomas/thomas_10.mp3
+11:50 thomas/thomas_05.mp3
+11:50 thomas/percy_15.mp3
+11:55 thomas/percy_10.mp3
+11:55 thomas/hatt_05.mp3
+12:00 thomas/hatt_now.mp3
+12:00 thomas/percy_05.mp3
+
+11:50 thomas/puppets_10.mp3
+11:55 thomas/puppets_05.mp3
+12:00 thomas/puppets.mp3
+
+12:20 thomas/live_10.mp3
+12:25 thomas/live_05.mp3
+12:30 thomas/live.mp3
+
+12:40 thomas/thomas_15.mp3
+12:45 thomas/thomas_10.mp3
+12:50 thomas/thomas_05.mp3
+12:50 thomas/percy_15.mp3
+12:55 thomas/percy_10.mp3
+12:55 thomas/hatt_05.mp3
+13:00 thomas/hatt_now.mp3
+13:00 thomas/percy_05.mp3
+
+12:50 thomas/puppets_10.mp3
+12:55 thomas/puppets_05.mp3
+13:00 thomas/puppets.mp3
+
+13:20 thomas/live_10.mp3
+13:25 thomas/live_05.mp3
+13:30 thomas/live.mp3
+
+13:40 thomas/thomas_15.mp3
+13:45 thomas/thomas_10.mp3
+13:50 thomas/thomas_05.mp3
+13:50 thomas/percy_15.mp3
+13:55 thomas/percy_10.mp3
+13:55 thomas/hatt_05.mp3
+14:00 thomas/hatt_now.mp3
+14:00 thomas/percy_05.mp3
+
+13:50 thomas/puppets_10.mp3
+13:55 thomas/puppets_05.mp3
+14:00 thomas/puppets.mp3
+
+14:40 thomas/thomas_15.mp3
+14:45 thomas/thomas_10.mp3
+14:50 thomas/thomas_05.mp3
+14:50 thomas/percy_15.mp3
+14:55 thomas/percy_10.mp3
+14:55 thomas/hatt_05.mp3
+15:00 thomas/hatt_now.mp3
+15:00 thomas/percy_05.mp3
+
+15:40 thomas/thomas_last_15.mp3
+15:45 thomas/thomas_last_10.mp3
+15:50 thomas/thomas_last_05.mp3
+15:50 thomas/percy_last_15.mp3
+15:55 thomas/percy_last_10.mp3
+16:00 thomas/percy_last_05.mp3
+
+16:45 thomas/close_15.mp3
+16:50 thomas/close_10.mp3
+16:55 thomas/close_05.mp3
+17:00 thomas/closed.mp3
+17:10 thomas/closed.mp3
+17:20 thomas/closed.mp3
+17:30 thomas/closed.mp3

@@ -1,0 +1,37 @@
+# Schedule for normal oerm day (train only)
+#
+# 11:00 train
+10:45    train_15.mp3
+10:50    train_10.mp3
+10:55    train_05.mp3
+#10:00    train_now.mp3
+
+# 12:00 train
+11:45    train_15.mp3
+11:50    train_10.mp3
+11:55    train_05.mp3
+
+# 1:00 train
+12:45    train_15.mp3
+12:50    train_10.mp3
+12:55    train_05.mp3
+
+# 2:00 train
+13:45    train_15.mp3
+13:50    train_10.mp3
+13:55    train_05.mp3
+
+# 3:00 train
+14:45    train_15.mp3
+14:50    train_10.mp3
+14:55    train_05.mp3
+
+# 4:00 train
+15:45    train_15.mp3
+15:50    train_10.mp3
+15:55    train_05.mp3
+
+#10:15    trolley_15.mp3
+#10:20    trolley_10.mp3
+#10:25    trolley_05.mp3
+#10:30    trolley_now.mp3

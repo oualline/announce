@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>backgroundEdit</class>
+ <widget class="QMainWindow" name="backgroundEdit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>329</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Edit/Create Background Entry</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QRadioButton" name="radioComment">
+      <property name="text">
+       <string>Comment</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="commentText">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QRadioButton" name="radioAnnounce">
+      <property name="text">
+       <string>Announcement</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QRadioButton" name="radioMusic">
+      <property name="text">
+       <string>Music</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QCheckBox" name="anyTimeCheckbox">
+        <property name="text">
+         <string>Any Time</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Start Time Limit</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTimeEdit" name="startTime"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>End time limit</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTimeEdit" name="endTime"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="selectFileButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Select File</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="fileNameLabel">
+        <property name="text">
+         <string>&lt;file-name&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="playButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Play</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="loadDirButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Load All Music In Directory</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QPushButton" name="insertRepeatButton">
+        <property name="text">
+         <string>Insert Repeated Announcement</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Number of songs / announcment</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="repeatCount">
+        <property name="maximum">
+         <number>999</number>
+        </property>
+        <property name="value">
+         <number>5</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="appluButton">
+        <property name="text">
+         <string>Apply</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cancelButton">
+        <property name="text">
+         <string>Cancel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>selectFileButton</sender>
+   <signal>clicked()</signal>
+   <receiver>backgroundEdit</receiver>
+   <slot>selectFileButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>92</x>
+     <y>207</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>154</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>playButton</sender>
+   <signal>clicked()</signal>
+   <receiver>backgroundEdit</receiver>
+   <slot>playButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>607</x>
+     <y>207</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>799</x>
+     <y>153</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>insertRepeatButton</sender>
+   <signal>clicked()</signal>
+   <receiver>backgroundEdit</receiver>
+   <slot>repeatButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>193</x>
+     <y>259</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>259</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>loadDirButton</sender>
+   <signal>clicked()</signal>
+   <receiver>backgroundEdit</receiver>
+   <slot>loadAllButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>790</x>
+     <y>207</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>795</x>
+     <y>236</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioMusic</sender>
+   <signal>clicked()</signal>
+   <receiver>backgroundEdit</receiver>
+   <slot>enableParts()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>102</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>129</x>
+     <y>258</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioAnnounce</sender>
+   <signal>clicked()</signal>
+   <receiver>backgroundEdit</receiver>
+   <slot>enableParts()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>345</x>
+     <y>82</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>371</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>anyTimeCheckbox</sender>
+   <signal>clicked()</signal>
+   <receiver>backgroundEdit</receiver>
+   <slot>enableParts()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>108</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>99</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioComment</sender>
+   <signal>clicked()</signal>
+   <receiver>backgroundEdit</receiver>
+   <slot>enableParts()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>216</x>
+     <y>14</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>507</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>backgroundEdit</receiver>
+   <slot>cancelButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>790</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>799</x>
+     <y>192</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>appluButton</sender>
+   <signal>clicked()</signal>
+   <receiver>backgroundEdit</receiver>
+   <slot>applyButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>117</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>197</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>enableParts()</slot>
+  <slot>selectFileButtonClicked()</slot>
+  <slot>playButtonClicked()</slot>
+  <slot>applyButtonClicked()</slot>
+  <slot>cancelButtonClicked()</slot>
+  <slot>repeatButtonClicked()</slot>
+  <slot>loadAllButtonClicked()</slot>
+  <slot>commentRadioClicked()</slot>
+  <slot>insertRepeatClicked()</slot>
+ </slots>
+</ui>

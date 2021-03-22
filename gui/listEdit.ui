@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>listEdit</class>
+ <widget class="QMainWindow" name="listEdit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>668</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ListEdit</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="editWhatLabel">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QListWidget" name="listWidget">
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="moveUpButton">
+        <property name="text">
+         <string>Move Up</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="moveDownButton">
+        <property name="text">
+         <string>Move Down</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="editButton">
+        <property name="text">
+         <string>Edit</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="insertAboveButton">
+        <property name="text">
+         <string>Insert Above</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="deletebutton">
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QPushButton" name="saveButton">
+        <property name="text">
+         <string>Save</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="saveAsButton">
+        <property name="text">
+         <string>Save As</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cancelButton">
+        <property name="text">
+         <string>Cancel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>moveUpButton</sender>
+   <signal>clicked()</signal>
+   <receiver>listEdit</receiver>
+   <slot>buttonMoveUpPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>128</x>
+     <y>619</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>568</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>moveDownButton</sender>
+   <signal>clicked()</signal>
+   <receiver>listEdit</receiver>
+   <slot>buttonMoveDownPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>265</x>
+     <y>622</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>622</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editButton</sender>
+   <signal>clicked()</signal>
+   <receiver>listEdit</receiver>
+   <slot>buttonEditPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>397</x>
+     <y>617</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>516</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>insertAboveButton</sender>
+   <signal>clicked()</signal>
+   <receiver>listEdit</receiver>
+   <slot>buttonInsertAbovePressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>583</x>
+     <y>614</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>432</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>deletebutton</sender>
+   <signal>clicked()</signal>
+   <receiver>listEdit</receiver>
+   <slot>buttonDeletePressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>740</x>
+     <y>622</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>799</x>
+     <y>602</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>saveButton</sender>
+   <signal>clicked()</signal>
+   <receiver>listEdit</receiver>
+   <slot>buttonSavePressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>64</x>
+     <y>653</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-3</x>
+     <y>651</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>saveAsButton</sender>
+   <signal>clicked()</signal>
+   <receiver>listEdit</receiver>
+   <slot>buttonSaveAsPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>461</x>
+     <y>641</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>795</x>
+     <y>564</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>listEdit</receiver>
+   <slot>buttonCancelPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>659</x>
+     <y>648</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>800</x>
+     <y>649</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>buttonMoveUpPressed()</slot>
+  <slot>buttonMoveDownPressed()</slot>
+  <slot>buttonEditPressed()</slot>
+  <slot>buttonInsertAbovePressed()</slot>
+  <slot>buttonDeletePressed()</slot>
+  <slot>buttonSavePressed()</slot>
+  <slot>buttonSaveAsPressed()</slot>
+  <slot>buttonCancelPressed()</slot>
+ </slots>
+</ui>

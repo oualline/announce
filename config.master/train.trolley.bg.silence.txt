@@ -1,0 +1,4 @@
+Trains on the hour (9-4) / Trolley on the half hour (9:30-4:30) / No background music
+train_trolley_hour.txt
+silence.txt
+30

@@ -1,0 +1,189 @@
+Test Plan for Complete Coverage
+
+Module mainWindowMain.py
+
+1. Click "Play" observe announce program start.
+
+2. Click "Edit" go to edit window.
+
+3. Click "Cancel" go to main window
+
+4. Click "Create" go to edit window
+
+5. Click "Save" to save new file -- return to main window
+
+6. Click "Shutdown", observe exit of window
+
+----------------------------------------------------------------
+Moudle configEditMain.py
+
+1. Main Window: Click edit to go to config edit window
+
+2. Click Announce Edit.  Go to GUI.  Cancel to return.
+
+3. Click Announce Edit with Editor.  Go to Editor.  Exit Editor.
+
+4. Click Announce Edit with Vim.  Go to Vim.  Exit Vim.
+
+5. Click Announce Open in file manager.  Close file manager.
+
+6. Click Background Edit.  Go to GUI.  Cancel to return.
+
+7. Click Background Edit with Editor.  Go to Editor.  Exit Editor.
+
+8. Click Background Edit with Vim.  Go to Vim.  Exit Vim.
+
+9. Click Background Open in file manager.  Close file manager.
+
+10. Change background description.  Save.  Verify change.
+
+11. Edit to go to config window.  Change volume. Save.  Verify change.
+
+11. Edit to go to config edit window, save as.  Verify save.
+
+12. Edit to go to config edit window.  Cancel.  Verify return.
+
+13. Edit to go to config edit window.  Save as using directory outside the config.
+	Observe error message and no window change
+
+14. Edit to go to config edit window.  Save as using non-existant directory.
+	Observe error message and no window change
+
+----------------------------------------------------------------
+Announce list edit
+Bacground list edit as well
+
+1. Select entry / move up -- observe moved up
+
+2. Select 2nd entry / move up / move up / move up -- does not go past top
+
+3. Select entry / move down -- observe moved up
+
+4. Select 2nd to last entry / move down / move down / move down -- does not go past bottom
+
+5. Edit / Popup edit window / See below
+
+6. Insert above / Add comment / Observe comment added.
+
+7. Delete just inserted item.  Observe delete.
+
+8. Save -- verify file saved.
+
+9. Edit again / Save as / Verify same file saved
+
+10. Cancel -- Observe go to main window
+
+
+----------------------------------------------------------------
+Announce entry edit / create
+
+1. Edit announcement. observe file and time set.
+
+2. Select file.  Observe file selection box. 
+
+3. Click OK, observe file name changed.
+
+4. Click play.  Observe file coming from speaker.
+
+5. Change time. Observe changed
+
+6. Click apply.  Observe changes in list
+
+7. click edit.   Observe popup.
+
+8. Click command.  Observe comment populated.
+
+9. Click apply.  Return to list.  Observe changed.
+
+10. Edit entry.
+
+11. Click Announcment.  Observe announcment populated with previous information.
+
+12. Click cancel.  Return to list edit
+
+13. Edit entry.  Select invalid file.  Click apply.  Observe error message.
+
+14. Edit entry.  Select invalid file.  Click play.  Observe error message.
+
+----------------------------------------------------------------
+Background entry edit / create
+
+1. Edit music entry / Change music file / save / observe changes
+
+2. Edit music entry / Change any -> 8/10. Save / observe changes.
+
+3. Edit announce entry / Change music file / save / observe changes
+
+4. Edit announce entry / Change any -> 8/10. Save / observe changes.
+
+5. Edit music entry.  Change to announce.  Apply / Error -- not a announce file selected
+
+6. Edit music entry.  Change to announce.  Change file / save.
+
+7. Edit announc entry.  Change to music.  Apply / Error -- not a announce file selected
+
+8. Edit announc entry.  Change to music.  Change file / save.
+
+9. Music entry -> Play -> hear announcement
+
+10. Music entry -> Play -> hear announcement
+
+11. Announce -> Comment -> Save -> Observe changes
+
+12. Comment -> Announce -> Save -> Observe changes
+
+13. Background -> Comment -> Save -> Observe changes
+
+14. Comment -> Background -> Save -> Observe changes
+
+15. Delete comment -- Observe changes
+
+16. Delete announcment -- Popup asks for delete all -- No
+
+17. Delete announcment -- Popup asks for delete all -- Yes
+
+18. Insert repeated announcement.  Observe result.
+
+================================================================
+-- 1. Config Editor, do not edit file name
+
+??2. Popup error when trying to save music file as announcment and 
+   vice versa.	// General invalid file save
+
+??3. announcment / check all file before / apply, play
+
+4. Lint/pydoc all
+
+--5. util.py -- Make name2 test for existance of file
+
+??6. Add ability to suspend announcements
+
+--7. Config Editor / Save As / Cancel / Still returns to main window
+
+--8. Main window / Add file manager button
+
+--9. Main window / keep track of selection
+
+--10. Remove announcment / popup -- remove all
+
+??11. Announce edit / invalid file / error message.
+
+??12. Announce edit / play / invalid file / error message
+
+--13. Music entry / anytime not selected properly
+
+xx14. Refresh button on listEdit
+
+xx15. Refresh button on configEdit
+
+--16. Sort entries in configEdit
+
+--17. Keep index on configEdit
+
+--18. Update file manager / editor for crunchbang
+
+19. Config / refresh button
+
+20. List edit / refresh button
+
+21. Main / refresh button
