@@ -40,8 +40,9 @@ import time
 import getopt
 #import pprint
 import select
-
-import vlc
+import subprocess
+import os
+import signal
 
 import config
 
@@ -99,6 +100,8 @@ def doCommand()->None:
     #q -- Quit
     result = re.match(r'^q', command)
     if result is not None:
+        Kill = subprocess.Popen(["/usr/bin/killall", "mpg123"])
+        Kill.wait()
         sys.exit(0)
 
     print("Suspend set to %s" % suspendFlag)
@@ -146,7 +149,8 @@ class background:
             volume = 100
         self.volume = volume
         print("Volume is %d" % volume)
-        self.backgroundPlayer.audio_set_volume(int(self.volume))
+        Mixer = subprocess.Popen(["/usr/bin/amixer", "-q", "set", "Master", "%d%%" % int(self.volume)])
+        Mixer.wait()
 
     def getVolume(self: object) -> int:
         """
@@ -200,11 +204,17 @@ class background:
         log("Background playing %s" % self.backgroundList[self.backgroundIndex]['short_file'])
 
         if self.backgroundPlayer is not None:
-            self.backgroundPlayer.release()
+            log("Waiting for background player to finish")
+            self.backgroundPlayer.wait()
+            log("Waiting for background player to finish -- done")
+            self.backgroundPlayer = None
 
         self.backgroundPlayer = \
-            vlc.MediaPlayer(self.backgroundList[self.backgroundIndex]['file_name'])
-        self.backgroundPlayer.audio_set_volume(int(self.volume))
+                subprocess.Popen(["/usr/bin/mpg123", "-q", self.backgroundList[self.backgroundIndex]['file_name']], stdin=subprocess.DEVNULL)
+        log("Background player started %d %s" % (self.backgroundPlayer.pid, self.backgroundList[self.backgroundIndex]['file_name']))
+        Mixer = subprocess.Popen(["/usr/bin/amixer", "-q", "set", "Master", "%d%%" % int(self.volume)])
+        log("Mixer set to %d" % int(self.volume))
+        Mixer.wait()
         self.announce = (self.backgroundList[self.backgroundIndex]['type'] == 'a')
         log("End background.next")
 
@@ -218,16 +228,29 @@ class background:
         @note If playing announcment, wait time may be longer
         """
 
-        log("background.wait(%d)" % waitTime)
-        self.backgroundPlayer.play()
+        log("background.wait(%d, %d) -- sending SIGCONT" % (self.backgroundPlayer.pid, waitTime))
+        try:
+            os.kill(self.backgroundPlayer.pid, signal.SIGCONT)
+        except ProcessLookupError:
+            log("SIGCONT failed because background process done")
+        Mixer = subprocess.Popen(["/usr/bin/amixer", "-q", "set", "Master", "%d%%" % int(self.volume)])
+        log("Mixer set to %d" % int(self.volume))
+        Mixer.wait()
         stopTime = getNowMinutes() + waitTime
 
         while True:
             while True:
-                if select.select([sys.stdin], [], [], 0)[0]:
+                # Wait for command or 1 second to elapse
+                if select.select([sys.stdin], [], [], 1.0)[0]:
                     doCommand()
-                state = self.backgroundPlayer.get_state()
-                if state == vlc.State.Ended:
+                state = self.backgroundPlayer.poll()
+                if (False):
+                    if (state is not None):
+                        stateString = "Done"
+                    else:
+                        stateString = "running"
+                    log("background.poll(%d, %s)" % (self.backgroundPlayer.pid, stateString))
+                if state is not None:
                     break
 
                 # Break only if timeout and not in middle of announcement
@@ -237,7 +260,6 @@ class background:
             if getNowMinutes() >= stopTime:
                 break
             self.next()
-            self.backgroundPlayer.play()
 
         log("background.wait done")
 
@@ -250,15 +272,13 @@ class background:
 
     def pause(self) -> None:
         """
-        Pause until player / return when paused
+        Pause player 
         """
-        self.backgroundPlayer.pause()
-        while True:
-            state = self.backgroundPlayer.get_state()
-            if state in (vlc.State.Paused, state == vlc.State.Ended,
-                         vlc.State.NothingSpecial):
-                break
-            time.sleep(1)
+        log("background.pause(%d) -- sending SIGSTOP" % (self.backgroundPlayer.pid))
+        try:
+            os.kill(self.backgroundPlayer.pid, signal.SIGSTOP)
+        except ProcessLookupError:
+            log("Background process did not pause")
 
 
 def log(msg: str) -> str:
@@ -330,17 +350,14 @@ class foreground:
             print("Suspend in effect.  Skipped")
         else:
             foregroundPlayer =  \
-                vlc.MediaPlayer(self.scheduleList[self.scheduleNext]['file_name'])
-            foregroundPlayer.audio_set_volume(100)
-            foregroundPlayer.play()
+                subprocess.Popen(["/usr/bin/mpg123", "-q", self.scheduleList[self.scheduleNext]['file_name'] ], stdin=subprocess.DEVNULL)
+            log("Foreground player started (%d %s)" % (foregroundPlayer.pid, self.scheduleList[self.scheduleNext]['file_name']))
+            log("Volume set to 100%")
+            Mixer = subprocess.Popen(["/usr/bin/amixer", "-q", "set", "Master", "100%"])
+            Mixer.wait()
 
-            while True:
-                state = foregroundPlayer.get_state()
-                time.sleep(1)
-                if state == vlc.State.Ended:
-                    break
-
-            foregroundPlayer.release()
+            foregroundPlayer.wait()
+            log("Foreground player done")
 
         self.scheduleNext = self.scheduleNext + 1
 

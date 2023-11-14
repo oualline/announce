@@ -260,10 +260,17 @@ def readBackgroundFile(name: str, comment: bool):
                 'end_minute': int(parsed.group(5))}
             fileName = parsed.group(6)
             item['short_file'] = fileName
-            if item['type'] == 'a':
-                item['file_name'] = findFile(GENERAL_DIR, fileName)
-            else:
-                item['file_name'] = findFile(SONG_DIR, fileName)
+            try:
+                if item['type'] == 'a':
+                    item['file_name'] = findFile(GENERAL_DIR, fileName)
+                else:
+                    item['file_name'] = findFile(SONG_DIR, fileName)
+            except FileNotFoundError:
+                item['comment'] = True
+                item['text'] = "#<no-file>" + line.rstrip()
+                print("Missing file %s" % line.rstrip())
+                if not comment:
+                    continue
 
         result.append(item)
     inFile.close()

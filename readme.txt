@@ -1,14 +1,19 @@
+setup.txt	-- Setup instructions
+setup.sh	-- Setup script
+
 bin		-- Programs
 
 config.d	-- Configuration files
 announce.d	-- Timed Announcements / audio
 background.d	-- Background music
-general.d	-- General annoucments / audio
+general.d	-- General annulments / audio
 
 gui		-- GUI source files
 gui.exp		-- Playing around gui
 
 readme.txt	-- This file
 
-Note: The Jack Benny programs are in the public domain.
-The announcements I made.
+--------------------------
+bin/announce.py -- Program to do actual announcements
+bin/audit.py    -- See if we have any broken or unused files
+main.py		-- GUI program
